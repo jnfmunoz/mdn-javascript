@@ -1,3 +1,4 @@
+// Elementos HTML
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
@@ -8,8 +9,8 @@ const story = document.querySelector('.story');
  * @returns 
  */
 function randomValueFromArray(array){
-  const random = Math.floor(Math.random()*array.length);
-  return array[random];
+    const random = Math.floor(Math.random()*array.length);
+    return array[random];
 }
 
 const storyText = `It was 94 fahrenheit outside, so :insertx: went for a walk. 
@@ -22,19 +23,31 @@ const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewal
 
 randomize.addEventListener('click', result);
 
-// function result() {
+function result() {
 
-//   if(customName.value !== '') {
-//     const name = customName.value;
+    let newStory = storyText;   
 
-//   }
+    const   xItem = randomValueFromArray(insertX),
+            yItem = randomValueFromArray(insertY),
+            zItem = randomValueFromArray(insertZ);
 
-//   if(document.getElementById("uk").checked) {
-//     const weight = Math.round(300);
-//     const temperature =  Math.round(94);
+    newStory = newStory.replaceAll(':insertx:', xItem) ;   
+    newStory = newStory.replaceAll(':inserty:', yItem);
+    newStory = newStory.replaceAll(':insertz:', zItem);
 
-//   }
+    if(customName.value !== '') {
+        const name = customName.value;
+        newStory = newStory.replaceAll('Bob', name);
+    }
 
-//   story.textContent = ;
-//   story.style.visibility = 'visible';
-// }
+    if(document.getElementById("uk").checked) {
+        const weight = `${Math.round(300*0.0714286)} stone`;
+        const temperature =  `${Math.round((94-32) * 5 / 9)} centigrade`;
+        newStory = newStory.replaceAll('94 fahrenheit', temperature);
+        newStory = newStory.replaceAll('300 pounds', weight);
+
+    }
+
+    story.textContent = newStory;
+    story.style.visibility = 'visible';
+}

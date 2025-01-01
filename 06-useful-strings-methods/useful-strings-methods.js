@@ -1,5 +1,4 @@
 let browserType = "mozilla";
-
 const length = browserType.length
 console.log('browserType.length: ', length);
 

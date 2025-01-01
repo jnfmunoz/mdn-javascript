@@ -1,1 +1,0 @@
-https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/Useful_string_methods

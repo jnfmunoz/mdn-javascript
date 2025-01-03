@@ -58,4 +58,3 @@ console.log(myArray);
 
 myArray.shift();
 console.log(myArray);
-

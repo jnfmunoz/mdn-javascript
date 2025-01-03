@@ -15,4 +15,3 @@ for(let citie of cities){
     list.appendChild(listItem);
     
 }
-

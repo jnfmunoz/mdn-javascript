@@ -16,7 +16,7 @@ for (let i = 0; i <= products.length-1; i++) {
     let price = Number(array_split[1]);
 
     total = total + price;
-    itemText = array_split[0] + ' — $' + array_split[1];
+    itemText = array_split[0] + ' — $' + price;
 
     let listItem = document.createElement('li');
     listItem.textContent = itemText;

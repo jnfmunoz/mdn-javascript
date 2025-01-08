@@ -29,7 +29,7 @@ console.log(myArray[0]); // el primer elemento del arreglo
 console.log(myArray[1]); // el segundo elemento del arreglo
 console.log(myArray[myArray.length - 1]); // el último elemento del arreglo
 
-let myNewString = myArray.join(",");
+let myNewString = myArray.join(","); // array into string
 console.log(myNewString);
 
 let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
